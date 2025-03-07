@@ -1,0 +1,22 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+:root {
+  --vite-shadow: #646cffaa;
+  --react-shadow: #61dafbaa;
+  --note-gray: #888;
+  --note-shadow: #00000022;
+
+  --accent-light: #ABFFE4;
+  --accent: #38EEB4;
+  --accent-dark: #1a5442;
+}
+
+.card {
+  padding: 2em;
+}
+
