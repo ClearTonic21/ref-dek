@@ -12,7 +12,8 @@
 .dek-tab-list {
   display: flex;
   flex-direction: row;
-  height: 6vh;
+  height: -webkit-fill-available;
+  gap: 0.25rem;
 }
 
 .add-dek {
