@@ -26,6 +26,17 @@
   }
 }
 
-.read-the-docs {
-  color: var(--note-gray);
+.header-bar {
+  padding: 0 1rem;
+  margin: 0 0.5rem;
+  background-color: var(--bar-solid);
+  border-top: 0.15rem solid darkgray;
+  border-left: 0.15rem solid darkgray;
+  border-right: 0.25rem solid gray;
+  border-bottom: 0.25rem solid #575757;
+  box-shadow: 0.5rem 0.5rem 1rem var(--shadow);
+}
+
+button {
+  background-color: var(--shadow);
 }

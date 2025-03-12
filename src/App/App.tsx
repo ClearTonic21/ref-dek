@@ -2,25 +2,19 @@ import { useState } from 'react'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import './App.css'
+import SidebarSelector from './components/sidebar-selector/SidebarSelector';
 
 function App() {
-  const [count, setCount] = useState(0)
-  // const latestTab: string = "tab1"
+  const latestTab: number = 0;
+  let [currentTab, setTab] = useState(latestTab);
 
   return (
     <>
-      <div className='app-container'>
+      <div className="app-container">
         <Header></Header>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test HMR
-          </p>
-        </div>
-        <Footer></Footer>
+        <SidebarSelector currentDek={currentTab}></SidebarSelector>
       </div>
+      <Footer onTabChange={setTab} defaultTab={latestTab}></Footer>
     </>
   )
 }

@@ -1,4 +1,9 @@
-/* .footer-tabs {
+.footer-container {
   display: flex;
-  flex-direction: row-reverse;
-} */
+  flex-direction: column;
+  height: fit-content;
+  padding: 0.25rem;
+  margin: 0.5rem 0 0 0;
+  background-color: var(--bar-shade);
+  border-top: 0.15rem solid yellow;
+}

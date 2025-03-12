@@ -1,19 +1,23 @@
+import { Tab, TabGroup, TabList, } from '@headlessui/react'
+import addCircle from '../../../assets/add-circle.png'
 import './Footer.css'
-import { Tabs } from '@radix-ui/react-tabs'
 
-function Footer({_defaultTab = "tab2"}) {
+function Footer({defaultTab = 1, onTabChange}: {defaultTab: number, onTabChange: (tabIndex: number) => void}) {
+
+  function addDek() {
+    console.log('Add Dek')
+  }
 
   return (
     <>
       <div className="footer-container">
-        <Tabs.Root className="footer-tabs" defaultValue={_defaultTab}>
-          <Tabs.List aria-label="tabs example">
-            <Tabs.Trigger value="tab1">References</Tabs.Trigger>
-            <Tabs.Trigger value="tab2">Dek 0</Tabs.Trigger>
-          </Tabs.List>
-          <Tabs.Content value="tab1">References content</Tabs.Content>
-          <Tabs.Content value="tab2">Dek 0 content</Tabs.Content>
-        </Tabs.Root>
+        <TabGroup defaultIndex={defaultTab} onChange={onTabChange}>
+          <TabList>
+            <Tab>Dek 0</Tab>
+            <Tab>Dek 1</Tab>
+            <Tab><img onClick={addDek} src={addCircle} className="addDek" alt="Add Ref Dek"/></Tab>
+          </TabList>
+        </TabGroup>
       </div>
     </>
   )
