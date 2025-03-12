@@ -16,3 +16,10 @@
 .app-container {
   padding: 0.25rem 0.15rem;
 }
+
+.app-content {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem 0.5rem 0;
+  gap: 1rem;
+}

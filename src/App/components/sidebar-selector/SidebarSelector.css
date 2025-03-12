@@ -1,16 +1,13 @@
 .sidebar-selector-container {
   display: flex;
   flex-direction: column;
-  height: 81vh;
-  width: 24vh;
+  height: 84vh;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
   height: -webkit-fill-available;
-  padding: 0 0 0 0.25rem;
-  margin: 0.5rem 0 0 0.5rem;
   background-color: var(--bar-solid);
   border-top: 0.15rem solid darkgray;
   border-left: 0.15rem solid darkgray;
@@ -27,8 +24,7 @@
 
 .selector-list {
   height: 100%;
-  padding: 0.5rem 0;
-  margin: 0.5rem 0.25rem;
+  padding: 1.25rem 0;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -36,5 +32,15 @@
 .dek-file-list {
   display: flex;
   flex-direction: column;
-  padding: 0 0.25rem 0 0;
+}
+
+.file-preview {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.file-name {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
 }

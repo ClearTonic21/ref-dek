@@ -2,7 +2,7 @@ import { Tab, TabGroup, TabList, } from '@headlessui/react'
 import addCircle from '../../../assets/add-circle-white-fill.png'
 import './Footer.css'
 
-function Footer({defaultTab = 1, onTabChange}: {defaultTab: number, onTabChange: (tabIndex: number) => void}) {
+function Footer({defaultTab = 0, onTabChange}: {defaultTab: number, onTabChange: (tabIndex: number) => void}) {
 
   function addDek() {
     console.log('Add Dek')

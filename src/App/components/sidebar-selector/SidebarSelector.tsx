@@ -1,8 +1,19 @@
+import DekFile from '../Dek/models/DekFile'
 import './SidebarSelector.css'
 import { Tab, TabGroup, TabList, } from '@headlessui/react'
 
-
-function SidebarSelector({currentDek = 0} : {currentDek: number}) {
+function SidebarSelector({
+  currentDekIndex: currentDek = 0,
+  dekFiles = [],
+  defaultFileIndex = 0,
+  onFileChange
+}:{
+  currentDekIndex: number,
+  dekFiles: DekFile[],
+  defaultFileIndex: number,
+  onFileChange: (fileIndex: number) => void
+}
+) {
 
   return (
     <>
@@ -12,32 +23,19 @@ function SidebarSelector({currentDek = 0} : {currentDek: number}) {
             <h3>Dek {currentDek}</h3>
           </div>
           <div className="selector-list">
-            <TabGroup vertical>
+            <TabGroup vertical defaultIndex={defaultFileIndex} onChange={onFileChange}>
               <TabList className="dek-file-list">
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
-                <Tab>DekFile</Tab>
+                {dekFiles.map((file: DekFile) => {
+                  return (
+                    <Tab key={file.fileNumber}>
+                      <div className="file-preview">
+                        <div className="file-number">{file.fileNumber}</div>
+                        <div className="divider">|</div>
+                        <div className="file-name">{file.name}</div>
+                      </div>
+                    </Tab>
+                  )
+                })}
               </TabList>
             </TabGroup>
           </div>
