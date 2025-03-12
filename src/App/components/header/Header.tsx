@@ -6,7 +6,8 @@ function Header() {
     <>
       <div className="header-container">
         <div className="header-bar">
-          <h1>Vite + React + HeadlessUI + Tailwind CSS</h1>
+          <h3>Vite + React + HeadlessUI + Tailwind CSS</h3>
+          <button className="header-button">Sign in</button>
         </div>
       </div>
     </>

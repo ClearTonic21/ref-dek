@@ -27,6 +27,10 @@
 }
 
 .header-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding: 0 1rem;
   margin: 0.15rem 0.5rem;
   background-color: var(--bar-solid);
@@ -38,5 +42,9 @@
 }
 
 button {
-  background-color: var(--shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 0.5rem;
 }
