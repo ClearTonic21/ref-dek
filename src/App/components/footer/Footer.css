@@ -7,3 +7,15 @@
   background-color: var(--bar-shade);
   border-top: 0.15rem solid yellow;
 }
+
+.dek-tab-list {
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
