@@ -14,8 +14,10 @@
   height: 5vh;
 }
 
-button {
+.add-dek {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 0.15rem;
+  width: fit-content;
 }

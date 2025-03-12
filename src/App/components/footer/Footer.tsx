@@ -15,7 +15,7 @@ function Footer({defaultTab = 1, onTabChange}: {defaultTab: number, onTabChange:
           <TabList className="dek-tab-list">
             <Tab>Dek 0</Tab>
             <Tab>Dek 1</Tab>
-            <Tab><img onClick={addDek} src={addCircle} className="addDek" alt="Add Ref Dek"/></Tab>
+            <Tab className="add-dek"><img onClick={addDek} src={addCircle} alt="Add Ref Dek"/></Tab>
           </TabList>
         </TabGroup>
       </div>
