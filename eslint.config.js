@@ -17,7 +17,8 @@ export default tseslint.config(
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
     },
-    rules: {
+    "rules": {
+      "prettier/prettier": ['warn'],
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',

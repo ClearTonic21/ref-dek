@@ -1,22 +1,18 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
 :root {
-  --vite-shadow: #646cffaa;
-  --react-shadow: #61dafbaa;
   --note-gray: #888;
-  --note-shadow: #00000022;
+  --text-dark: #1f1f1f;
+  --text-invert: whitesmoke;
+  --shadow: #00000080;
 
-  --accent-light: #ABFFE4;
-  --accent: #38EEB4;
+  --accent-light: #abffe4;
+  --accent: #38eeb4;
   --accent-dark: #1a5442;
+  --accent-bg: #466157;
+
+  --bar-solid: #c0c0c0;
+  --bar-shade: #575757;
 }
 
-.card {
-  padding: 2em;
+.app-container {
+  padding: 0.25rem 0.15rem;
 }
-
