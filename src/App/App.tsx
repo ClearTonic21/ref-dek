@@ -1,12 +1,13 @@
-import { useState } from 'react'
-import Header from './components/header/Header'
-import Footer from './components/footer/Footer'
-import './App.css'
+import { useState } from 'react';
+import Header from './components/header/Header';
 import SidebarSelector from './components/sidebar-selector/SidebarSelector';
-import DekFileComponent from './components/Dek/dek-file/DekFileComponent';
-import DekFile from './components/Dek/models/DekFile';
-import DekFileExamples from './components/Dek/models/DekFileExamples';
-import RefDek from './components/Dek/models/RefDek';
+import DekFileComponent from './components/RefDek/dek-file/DekFileComponent';
+import ControlPanel from './components/control-panel/ControlPanel';
+import Footer from './components/footer/Footer';
+import RefDek from './components/RefDek/models/RefDek';
+import DekFile from './components/RefDek/models/DekFile';
+import DekFileExamples from './components/RefDek/models/DekFileExamples';
+import './App.css';
 
 function App() {
   const latestDek: number = 0;
@@ -27,6 +28,7 @@ function App() {
             onFileChange={setDekFileIndex}
           ></SidebarSelector>
           <DekFileComponent file={refDeks[currentDek].dekFiles[currentFileIndex]}></DekFileComponent>
+          <ControlPanel></ControlPanel>
         </div>
       </div>
       <Footer onTabChange={setTab} defaultTab={latestDek}></Footer>

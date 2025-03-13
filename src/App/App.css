@@ -22,4 +22,5 @@
   flex-direction: row;
   margin: 0.5rem 0.5rem 0;
   gap: 1rem;
+  justify-content: space-between;
 }

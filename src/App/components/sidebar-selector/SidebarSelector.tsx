@@ -1,6 +1,6 @@
-import DekFile from '../Dek/models/DekFile'
-import './SidebarSelector.css'
-import { Tab, TabGroup, TabList, } from '@headlessui/react'
+import DekFile from '../RefDek/models/DekFile';
+import './SidebarSelector.css';
+import { Tab, TabGroup, TabList, } from '@headlessui/react';
 
 function SidebarSelector({
   currentDekIndex: currentDek = 0,
