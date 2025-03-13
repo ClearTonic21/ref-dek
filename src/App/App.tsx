@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from './components/header/Header';
 import SidebarSelector from './components/sidebar-selector/SidebarSelector';
-import DekFileComponent from './components/RefDek/dek-file/DekFileComponent';
+import DekFileComponent from './components/RefDek/dek-file/DekFile.component';
 import ControlPanel from './components/control-panel/ControlPanel';
 import Footer from './components/footer/Footer';
 import RefDek from './components/RefDek/models/RefDek';

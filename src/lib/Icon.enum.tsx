@@ -6,6 +6,8 @@ enum IconName {
   Delete = "delete",
   Undo = "undo",
   Redo = "redo",
+  Exit = "exit",
+  More = "more"
 }
 
 export default IconName;
