@@ -1,3 +1,5 @@
+import './FileSection.css'
+
 class FileSection {
   public sectionNumber: number;
   public title: string;
@@ -7,6 +9,16 @@ class FileSection {
     this.sectionNumber = sectionNum;
     this.title = title || 'undefined';
     this.value = value || '';
+  }
+
+  render() {
+    return (
+      <>
+        <div className="file-section-container">
+          <div className="section-title">{this.title}</div>
+        </div>
+      </>
+    )
   }
 }
 

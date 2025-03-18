@@ -1,9 +1,9 @@
-import DekFile from '../RefDek/models/DekFile';
+import DekFile from '../dek-file/DekFile';
 import './SidebarSelector.css';
 import { Tab, TabGroup, TabList, } from '@headlessui/react';
 
 function SidebarSelector({
-  currentDekIndex: currentDek = 0,
+  currentDekIndex = 0,
   dekFiles = [],
   defaultFileIndex = 0,
   onFileChange
@@ -20,7 +20,7 @@ function SidebarSelector({
       <div className="sidebar-selector-container">
         <div className="sidebar">
           <div className="sidebar-title">
-            <h3>Dek {currentDek}</h3>
+            <h3>Dek {currentDekIndex}</h3>
           </div>
           <div className="selector-list">
             <TabGroup vertical defaultIndex={defaultFileIndex} onChange={onFileChange}>

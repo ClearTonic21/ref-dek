@@ -1,8 +1,9 @@
 import { Tab, TabGroup, TabList, } from '@headlessui/react'
 import addCircle from '../../../assets/add-circle-white-fill.png'
+import RefDek from '../RefDek/RefDek'
 import './Footer.css'
 
-function Footer({defaultTab = 0, onTabChange}: {defaultTab: number, onTabChange: (tabIndex: number) => void}) {
+function Footer({refDeks = [new RefDek(0, '', [])], defaultTab = 0, onTabChange}: {refDeks: RefDek[], defaultTab: number, onTabChange: (tabIndex: number) => void}) {
 
   function addDek() {
     console.log('Add Dek')
@@ -13,8 +14,15 @@ function Footer({defaultTab = 0, onTabChange}: {defaultTab: number, onTabChange:
       <div className="footer-container">
         <TabGroup defaultIndex={defaultTab} onChange={onTabChange}>
           <TabList className="dek-tab-list">
-            <Tab>Dek 0</Tab>
-            <Tab>Dek 1</Tab>
+            {refDeks.map((dek: RefDek) => {
+              return (
+                <Tab key={dek.dekNumber}>
+                  <div className="dek-number">{dek.dekNumber}</div>
+                  <div className="divider">|</div>
+                  <div className="dek-name">{dek.dekName}</div>
+                </Tab>
+              )
+            })}
             <Tab className="add-dek"><img onClick={addDek} src={addCircle} alt="Add Ref Dek"/></Tab>
           </TabList>
         </TabGroup>

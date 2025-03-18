@@ -13,11 +13,11 @@
   --bar-shade: #575757;
 }
 
-.app-container {
+.app-content {
   padding: 0.25rem 0.15rem;
 }
 
-.app-content {
+.app-container {
   display: flex;
   flex-direction: row;
   margin: 0.5rem 0.5rem 0;
