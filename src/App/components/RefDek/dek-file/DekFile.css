@@ -1,0 +1,14 @@
+.dek-file-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+}
+
+.primary-image {
+  flex-direction: column;
+  display: flex;
+  width: 24vh;
+  justify-content: center;
+}
+
