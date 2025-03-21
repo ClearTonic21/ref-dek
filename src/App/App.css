@@ -13,14 +13,14 @@
   --bar-shade: #575757;
 }
 
-.app-content {
-  padding: 0.25rem 0.15rem;
+.app-container {
+  padding: 0.25rem 0;
 }
 
-.app-container {
+.app-content {
   display: flex;
   flex-direction: row;
-  margin: 0.5rem 0.5rem 0;
+  margin: 0.5rem 0 0;
   gap: 1rem;
   justify-content: space-between;
 }
