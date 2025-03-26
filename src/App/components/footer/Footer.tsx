@@ -3,10 +3,18 @@ import addCircle from '../../../assets/add-circle-white-fill.png'
 import RefDek from '../RefDek/RefDek'
 import './Footer.css'
 
-function Footer({refDeks = [new RefDek(0, '', [])], defaultTab = 0, onTabChange}: {refDeks: RefDek[], defaultTab: number, onTabChange: (tabIndex: number) => void}) {
+function Footer({
+    refDeks = [new RefDek(0, '', [])],
+    defaultTab = 0,
+    onTabChange
+  }: {
+    refDeks: RefDek[],
+    defaultTab: number,
+    onTabChange: (tabIndex: number) => void
+  }) {
 
   function addDek() {
-    console.log('Add Dek')
+    console.log('Add Dek');
   }
 
   return (
@@ -16,14 +24,14 @@ function Footer({refDeks = [new RefDek(0, '', [])], defaultTab = 0, onTabChange}
           <TabList className="dek-tab-list">
             {refDeks.map((dek: RefDek) => {
               return (
-                <Tab key={dek.dekNumber}>
+                <Tab className="dek-tab" key={dek.dekNumber}>
                   <div className="dek-number">{dek.dekNumber}</div>
                   <div className="divider">|</div>
                   <div className="dek-name">{dek.dekName}</div>
                 </Tab>
               )
             })}
-            <Tab className="add-dek"><img onClick={addDek} src={addCircle} alt="Add Ref Dek"/></Tab>
+            <button className="add-dek"><img onClick={addDek} src={addCircle} alt="Add Ref Dek"/></button>
           </TabList>
         </TabGroup>
       </div>

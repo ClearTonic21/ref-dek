@@ -1,6 +1,6 @@
 import DekFile from "../components/RefDek/dek-file/DekFile";
 
-function DekFileExamples(name: string = 'ALL'): DekFile[] {
+function DekFileExamples(name: string = ''): DekFile[] {
 
   switch(name) {
     case 'ALL':

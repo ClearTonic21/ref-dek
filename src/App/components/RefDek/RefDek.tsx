@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { JSX, useState } from "react";
 import ControlPanel from "../control-panel/ControlPanel";
 import SidebarSelector from "./sidebar-selector/SidebarSelector";
 import DekFile from "./dek-file/DekFile";
+import './RefDek.css';
 
 class RefDek {
   dekNumber: number = -1;
@@ -12,26 +13,30 @@ class RefDek {
     this.dekNumber = number;
     this.dekName = name;
     this.dekFiles = files || [new DekFile(0, 'Title', '', '', [])];
-   }
+  }
 
-   render() {
-    let [currentFileIndex, setDekFileIndex] = useState(0);
+  render(latestFile: number = 0): JSX.Element {
+    let [currentFileIndex, setDekFileIndex] = useState(latestFile);
 
     return (
       <>
         <div className="ref-dek-container">
-          <SidebarSelector
-            currentDekIndex={this.dekNumber}
-            dekFiles={this.dekFiles}
-            defaultFileIndex={0}
-            onFileChange={setDekFileIndex}
-          ></SidebarSelector>
-          {this.dekFiles[currentFileIndex].render()}
+          <div className="ref-dek-content">
+            <div className="banner"></div>
+            <SidebarSelector
+              currentDekIndex={this.dekNumber}
+              dekName={this.dekName}
+              dekFiles={this.dekFiles}
+              defaultFileIndex={latestFile}
+              onFileChange={setDekFileIndex}
+            ></SidebarSelector>
+            {this.dekFiles[currentFileIndex].render()}
+          </div>
           <ControlPanel></ControlPanel>
         </div>
       </>
     )
-   }
+  }
 }
 
 export default RefDek;
