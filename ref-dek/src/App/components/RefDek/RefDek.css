@@ -1,0 +1,25 @@
+.ref-dek-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0.5rem 0.5rem 0;
+}
+
+.ref-dek-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+
+.banner {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  height: 9.5vh;
+  width: 100%;
+  margin: 0.5rem 0 0 0;
+  background: coral;
+  z-index: -1;
+}

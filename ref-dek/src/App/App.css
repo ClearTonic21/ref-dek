@@ -1,0 +1,26 @@
+:root {
+  --note-gray: #888;
+  --text-dark: #1f1f1f;
+  --text-invert: whitesmoke;
+  --shadow: #00000080;
+
+  --accent-light: #abffe4;
+  --accent: #38eeb4;
+  --accent-dark: #1a5442;
+  --accent-bg: #466157;
+
+  --bar-solid: #c0c0c0;
+  --bar-shade: #575757;
+}
+
+.app-container {
+  padding: 0.25rem 0;
+}
+
+.app-content {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem 0 0;
+  gap: 1rem;
+  justify-content: space-between;
+}
