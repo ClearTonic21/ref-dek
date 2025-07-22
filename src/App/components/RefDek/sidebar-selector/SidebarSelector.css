@@ -31,8 +31,8 @@
   margin: 0.25rem;
   overflow-y: scroll;
   overflow-x: hidden;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   border-top: 0.25rem solid #575757;
   border-left: 0.25rem solid gray;
   border-right: 0.15rem solid darkgray;

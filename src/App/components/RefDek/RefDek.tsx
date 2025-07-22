@@ -1,7 +1,7 @@
-import { JSX, useState } from "react";
-import ControlPanel from "../control-panel/ControlPanel";
-import SidebarSelector from "./sidebar-selector/SidebarSelector";
-import DekFile from "./dek-file/DekFile";
+import { JSX, useState } from 'react';
+import ControlPanel from '../control-panel/ControlPanel';
+import SidebarSelector from './sidebar-selector/SidebarSelector';
+import DekFile from './dek-file/DekFile';
 import './RefDek.css';
 
 class RefDek {
@@ -9,7 +9,7 @@ class RefDek {
   dekName: string = '';
   dekFiles: DekFile[] = [];
 
-  constructor (number: number, name: string, files: DekFile[]) {
+  constructor(number: number, name: string, files: DekFile[]) {
     this.dekNumber = number;
     this.dekName = name;
     this.dekFiles = files || [new DekFile(0, 'Title', '', '', [])];
@@ -20,9 +20,9 @@ class RefDek {
 
     return (
       <>
-        <div className="ref-dek-container">
-          <div className="ref-dek-content">
-            <div className="banner"></div>
+        <div className='ref-dek-container'>
+          <div className='ref-dek-content'>
+            <div className='banner'></div>
             <SidebarSelector
               currentDekIndex={this.dekNumber}
               dekName={this.dekName}
@@ -35,7 +35,7 @@ class RefDek {
           <ControlPanel></ControlPanel>
         </div>
       </>
-    )
+    );
   }
 }
 

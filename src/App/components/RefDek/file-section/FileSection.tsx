@@ -1,4 +1,4 @@
-import './FileSection.css'
+import './FileSection.css';
 
 class FileSection {
   public sectionNumber: number;
@@ -14,11 +14,11 @@ class FileSection {
   render() {
     return (
       <>
-        <div className="file-section-container">
-          <div className="section-title">{this.title}</div>
+        <div className='file-section-container'>
+          <div className='section-title'>{this.title}</div>
         </div>
       </>
-    )
+    );
   }
 }
 

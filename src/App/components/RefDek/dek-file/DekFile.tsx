@@ -1,8 +1,7 @@
-
 import { useState } from 'react';
-import ImageDisplay from '../../../../lib/ImageDisplay'
+import ImageDisplay from '../../../../lib/ImageDisplay';
 import FileSection from '../file-section/FileSection';
-import './DekFile.css'
+import './DekFile.css';
 
 class DekFile {
   public fileNumber: number;
@@ -13,7 +12,13 @@ class DekFile {
 
   private primaryImage: ImageDisplay = new ImageDisplay('', '', '');
 
-  constructor(fileNum: number, fileName: string, fileNumberSuffix: string, iconSrc: string, fileSections: FileSection[]) {
+  constructor(
+    fileNum: number,
+    fileName: string,
+    fileNumberSuffix: string,
+    iconSrc: string,
+    fileSections: FileSection[],
+  ) {
     this.fileNumber = fileNum;
     this.fileNumberSuffix = fileNumberSuffix || '';
     this.fileName = fileName || 'undefined';
@@ -27,26 +32,20 @@ class DekFile {
 
     return (
       <>
-        <div className="dek-file-container">
-          <div className="file-header">
-            <div className="banner"></div>
+        <div className='dek-file-container'>
+          <div className='file-header'>
+            <div className='banner'></div>
             <h3>{this.fileName}</h3>
-            <div className="primary-image">
-              {primaryImg.render()}
-            </div>
+            <div className='primary-image'>{primaryImg.render()}</div>
           </div>
-          <div className="file-section-list">
+          <div className='file-section-list'>
             {this.fileSections.map((section: FileSection) => {
-              return (
-                <div className="section-panel">
-                  {section.render()}
-                </div>
-              )})
-            }
+              return <div className='section-panel'>{section.render()}</div>;
+            })}
           </div>
         </div>
       </>
-    )
+    );
   }
 }
 

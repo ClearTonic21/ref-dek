@@ -8,29 +8,33 @@ import './App.css';
 function App() {
   const latestDek: number = 0;
   let [currentDek, setTab] = useState(latestDek);
-  
+
   const refDeks: Map<number, RefDek> = new Map(
-    RefDekExamples().map((refDek, index) => [index, refDek])
+    RefDekExamples().map((refDek, index) => [index, refDek]),
   );
 
   function displayNewDekModal(): ReactNode {
     console.log('Display new dek modal');
-    return (
-      <div>New Dek Modal</div>
-    );
+    return <div>New Dek Modal</div>;
   }
 
   return (
     <>
-      <div className="app-container">
+      <div className='app-container'>
         <Header></Header>
-        <div className="app-content">
-          {refDeks.has(currentDek) && refDeks.get(currentDek) 
-            ? refDeks.get(currentDek)!.render() 
-            : <div className='ref-dek-container'>{displayNewDekModal()}</div>}
+        <div className='app-content'>
+          {refDeks.has(currentDek) && refDeks.get(currentDek) ? (
+            refDeks.get(currentDek)!.render()
+          ) : (
+            <div className='ref-dek-container'>{displayNewDekModal()}</div>
+          )}
         </div>
       </div>
-      <Footer refDeks={Array.from(refDeks.values())} defaultTab={latestDek} onTabChange={setTab}></Footer>
+      <Footer
+        refDeks={Array.from(refDeks.values())}
+        defaultTab={latestDek}
+        onTabChange={setTab}
+      ></Footer>
     </>
   );
 }
